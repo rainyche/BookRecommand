@@ -3,17 +3,17 @@
     <head>
         <meta charset="UTF-8">
         <title>Recommended Books</title>
-        <link type="text/css" rel="stylesheet" href="books.css">
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'BookShare/books.css' %}" />
     </head>
 
     <body>
+    <p id="mytitle">Recommended books</p>
     {% for book in books %}
         <div class="book">
+            <p class="title">Book and score:</p>
             <p class="bookTitle">{{ book }}</p>
         </div>
-    {% end for %}
-    <form>
-        <input type="button"><a href = "/review/">Write review for books</a>
-    </form>
+    {% endfor %}
     </body>
   </html>

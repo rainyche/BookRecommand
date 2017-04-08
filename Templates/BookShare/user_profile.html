@@ -3,17 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>User Profile</title>
-    <link type="text/css" rel="stylesheet" href="user_profile.css">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'BookShare/user_profile.css' %}" />
 </head>
 <body>
-    <p>{{ user.name }}</p>
-    <p>{{ user.email }}</p>
-    <p>{{ keywords }}</p>
-    <p>{{ subject }}</p>
-    <p>{{ user.industry }}</p>
-    <p>{{ user.major }}</p>
-    <form>
-        <input type="button"><a href = "/display_book/">See recommended books</a>
-    </form>
+    <p id="title">Your Profile</p>
+    <div id="info">
+        <p>Name: {{ user.name }}</p>
+        <p>Email: {{ user.email }}</p>
+        <p>Keyword: {{ user.keywords }}</p>
+        <p>Subject: {{ user.subjects }}</p>
+        <p>Industry: {{ user.industry }}</p>
+        <p>Major: {{ user.major }}</p>
+    </div>
+    <div>
+        <button id="mybutton"><a href = "/display_book/">See recommended books</a></button>
+    </div>
 </body>
 </html>
