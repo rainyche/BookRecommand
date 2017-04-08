@@ -17,5 +17,5 @@ def eachbook(request, pk):
 
 def recommendations(request, pk):
     user = UserProfile.objects.filter(id = pk)
-    booklist = recommendations.recommend(user, Book)
+    booklist = recommendation.recommend(user, Book)
     return render(request, 'BookShare/display_book.html', {"books" : booklist})

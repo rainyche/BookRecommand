@@ -15,16 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-from django.contrib.auth import views
+from django.contrib.auth import views as auth_views
 from django.core.urlresolvers import reverse_lazy
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include('BookShare.urls')),
-    url(r'^accounts/logout/$', views.logout, name = 'logout', kwargs={'next_page':'/'}),
-    url(r'^accounts/login/$', views.login),
-    """url(r'^login/$', 'django.contrib.auth.views.login', {'template_name': 'login.html'},
-                   name='BookRecommand_login'),
-    url(r'^logout/$', 'django.contrib.auth.views.logout',
-                   {'next_page': reverse_lazy('homepage')}, name='BookRecommand_logout'),"""
-]
+    url(r'^logout/$', auth_views.logout, name = 'logout', kwargs={'next_page':'/'}),
+    url(r'^login/$', auth_views.login),
+    ]
