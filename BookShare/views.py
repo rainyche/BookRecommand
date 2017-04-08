@@ -9,13 +9,13 @@ def homepage(request):
 
 def eachuser(request, pk):
     user = UserProfile.objects.filter(id = pk)
-    return render(request, 'BookShare/user_profile.html', {"user" = user})
+    return render(request, 'BookShare/user_profile.html', {"user" : user})
 
 def eachbook(request, pk):
     book = Book.objects.filter(id = pk)
-    return render(request, 'BookShare/review.html', {"book" = book})
+    return render(request, 'BookShare/review.html', {"book" : book})
 
 def recommendations(request, pk):
     user = UserProfile.objects.filter(id = pk)
     booklist = recommendations.recommend(user, Book)
-    return render(request, 'BookShare/display_book.html', {"books" = booklist})
+    return render(request, 'BookShare/display_book.html', {"books" : booklist})
