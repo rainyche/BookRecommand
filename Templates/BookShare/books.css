@@ -1,0 +1,22 @@
+.book{
+    margin: 20em;
+}
+
+.bookTitle{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.bookAuthor{
+    font-size: 20px;
+    font-style: italic;
+}
+
+.bookSubject{
+    font-size: 20px;
+    font-color: blue;
+}
+
+.bookReviewer{
+    font-size: 20px;
+}
