@@ -8,12 +8,8 @@
 <body>
     <p>{% user.name %}</p>
     <p>{% user.email %}</p>
-    {% l_keywords = keywords.split(',') %}
-    {% for keyword in l_keywords %}
-        <p>{% keyword %}</p>
-    {% l_subjects = subjects.split(',') %}
-    {% for subject in l_subjects %}
-        <p>{% subject %}</p>
+    <p>{% user.keyword %}</p>
+    <p>{% user.subject %}</p>
     <p>{% user.industry %}</p>
     <p>{% user.major %}</p>
     <form>

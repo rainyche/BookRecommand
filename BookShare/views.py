@@ -19,15 +19,10 @@ def signup(request):
             user.subjects = form.cleaned_data.get('subjects')
             user.industry = form.cleaned_data.get('industry')
             user.major = form.cleaned_data.get('major')
-            bookstr = get('books')
-            bookattrlist = bookstr.split(",")
-            user.books = Book(title = bookattrlist[0], author = bookattrlist[1], subjects = bookattrlist[2], review = bookattrlist[3], reviewers = user)
+            user.books = form.cleaned_data.get('books')
 
             user.save()
-            username = form.cleaned_data.get('username')
-            raw_password = form.cleaned_data.get('password1')
-            user = authenticate(username=username, password=raw_password)
-            login(request, user)
+
             return redirect('home')
     else:
         form = SignUpForm()
@@ -45,11 +40,9 @@ def eachuser(request, id):
     user = UserProfile.objects.filter(id = id)
     return render(request, 'BookShare/user_profile.html', {"user" : user})
 
-def eachbook(request, id):
-    book = Book.objects.filter(id = id)
-    return render(request, 'BookShare/review.html', {"book" : book})
+
 
 def recommendations(request, id):
     user = UserProfile.objects.filter(id = id)
-    booklist = recommendation.recommend(user, Book)
+    booklist = recommendation.recommend(user)
     return render(request, 'BookShare/display_book.html', {"books" : booklist})

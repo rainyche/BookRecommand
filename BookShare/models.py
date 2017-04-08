@@ -2,6 +2,7 @@
 from __future__ import unicode_literals
 
 from django.db import models
+import django
 
 # Create your models here.
 # class UserProfile(models.Model):
@@ -20,12 +21,7 @@ from django.db import models
 #         return self.name
 
 
-class Book(models.Model):
-    title = models.CharField(max_length=200)
-    author = models.CharField(max_length=200)
-    subjects = models.CharField(max_length=200)
-    review = models.TextField()
-    reviewers = models.ForeignKey('user')
+
 
 class user(models.Model):
     
@@ -35,8 +31,8 @@ class user(models.Model):
     subjects = models.CharField(max_length=200)
     industry = models.CharField(max_length=200)
     major = models.CharField(max_length=200)
-    books = models.ForeignKey(Book)
-    USERNAME_FIELD = 'name'
+    books = models.CharField(max_length=200)
+
     
     def save(self):
         self.save()
