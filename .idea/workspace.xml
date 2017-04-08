@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ad1e3381-e42b-4394-bdda-6110d0c72c0e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BookShare/Templates/BookShare/books.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BookShare/Templates/BookShare/display_book.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BookShare/Templates/BookShare/home.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BookShare/Templates/BookShare/review.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BookShare/Templates/BookShare/user_profile.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BookShare/Templates/BookShare/user_profile.html" />
-    </list>
+    <list default="true" id="ad1e3381-e42b-4394-bdda-6110d0c72c0e" name="Default" comment="" />
     <ignored path="BookRecommend.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,17 +20,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="display_book.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/BookShare/Templates/BookShare/display_book.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user_profile.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="user_profile.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BookShare/Templates/BookShare/user_profile.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="320">
@@ -448,18 +431,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BookShare/Templates/BookShare/user_profile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BookShare/Templates/BookShare/display_book.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BookShare/Templates/BookShare/user_profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
           <folding />
         </state>
       </provider>
