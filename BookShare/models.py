@@ -23,7 +23,7 @@ import django
 
 
 
-class user(models.Model):
+class Uuser(models.Model):
 
     name = models.CharField(max_length=200)
     email = models.CharField(max_length=200)

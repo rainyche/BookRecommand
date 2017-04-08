@@ -1,7 +1,7 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
-from BookShare.models import user
+from BookShare.models import Uuser
 
 
 class SignUpForm(forms.ModelForm):
@@ -14,6 +14,5 @@ class SignUpForm(forms.ModelForm):
     books = forms.CharField(max_length=200)
 
     class Meta:
-        model = user
+        model = Uuser
         fields = ('name', 'email', 'keywords','subjects','industry','major','books')
-

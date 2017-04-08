@@ -9,10 +9,7 @@
     <body>
     {% for book in books %}
         <div class="book">
-            <p class="bookTitle">{% book.title %}</p>
-            <p class="bookAuthor">{% book.author %}</p>
-            <p class="bookSubject">{% book.subject %}</p>
-            <p class="bookReviewer">{% book.reviewer %}</p>
+            <p class="bookTitle">{{ book }}</p>
         </div>
     {% end for %}
     <form>

@@ -1,10 +1,10 @@
-import util
-
+import BookShare.util
+'''
 class user(object):
-    '''
+
     A user object is constructed when a user search for a book
     Attributes: subject, author, keyword
-    '''
+
     def __init__(self):
         self.interests = []
         self.subject = None
@@ -33,3 +33,4 @@ class user(object):
         for i in range(score + 1):
             match += dist[i]
         return match
+'''

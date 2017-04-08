@@ -1,6 +1,4 @@
-from class_user import user
-from class_book import book
-
+from BookShare.models import Uuser
 # need some tests
 
 def potential_recommend(c_user):
@@ -8,16 +6,16 @@ def potential_recommend(c_user):
         c_user: a user object
         '''
     userslist = []
-    if c_user.author == None and c_user.subject == None and c_user.keyword == None:
+    '''
+    if c_user.subjects == None and c_user.keywords == None:
         for peruser in user.objects.all():
             userslist.append(peruser)
         return userslist
-    else:
-        p_recommend = []
-        for peruser in user.objects.all():
-            if (book.author == c_user.author) or (book.subject == c_user.subject) or (c_user.keyword in book.review):
-                p_recommend.append(peruser)
-        return p_recommend
+    '''
+    for peruser in Uuser.objects.all():
+        if (peruser.keywords == c_user.keywords) or (peruser.subjects == c_user.subjects) or (c_user.industry == peruser.industry) or (peruser.major == c_user.major):
+            userslist.append(peruser)
+    return userslist
 
 def recommend(c_user):
     p_recommend = potential_recommend(c_user)

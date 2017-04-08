@@ -1,10 +1,10 @@
-import user
-
+import BookShare.Uuser
+'''
 class book(object):
-    '''
+
     A book object is constructed when a book is recommended.
     Attributes: title, author, subject, recommender
-    '''
+
     def __init__(self, title, author, subject, recommender, rating):
         self.title = title
         self.author = author
@@ -12,11 +12,7 @@ class book(object):
         book.review = None
         book.rating = rating
         book.recommender = recommender
-    
+
     def add_review(self, review):
         self.review = review
-
-
-
-
-     
+'''
