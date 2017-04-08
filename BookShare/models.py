@@ -28,6 +28,7 @@ class Book(models.Model):
     reviewers = models.ForeignKey('user')
 
 class user(models.Model):
+    
     name = models.CharField(max_length=200)
     email = models.CharField(max_length=200)
     keywords = models.TextField()
@@ -35,6 +36,7 @@ class user(models.Model):
     industry = models.CharField(max_length=200)
     major = models.CharField(max_length=200)
     books = models.ForeignKey(Book)
+    USERNAME_FIELD = 'name'
     
     def save(self):
         self.save()
