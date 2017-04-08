@@ -19,7 +19,9 @@ def signup(request):
             user.subjects = form.cleaned_data.get('subjects')
             user.industry = form.cleaned_data.get('industry')
             user.major = form.cleaned_data.get('major')
-            user.books = form.cleaned_data.get('books')
+            bookstr = get('books')
+            bookattrlist = bookstr.split(",")
+            user.books = Book(title = bookattrlist[0], author = bookattrlist[1], subjects = bookattrlist[2], review = bookattrlist[3], reviewers = user)
 
             user.save()
             username = form.cleaned_data.get('username')
