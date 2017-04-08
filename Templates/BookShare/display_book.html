@@ -9,9 +9,9 @@
 
     <body>
     <p id="mytitle">Recommended books</p>
-    {% for book in books %}
-        <div class="book">
-            <p class="title">Book and score:</p>
+    <div class="book">
+    <p class="title">Book and score:</p>
+        {% for book in books %}
             <p class="bookTitle">{{ book }}</p>
         </div>
     {% endfor %}
