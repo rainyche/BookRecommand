@@ -21,7 +21,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include('BookShare.urls')),
     url(r'^login/$', 'django.contrib.auth.views.login', {'template_name': 'login.html'},
-                   name='mysite_login'),
+                   name='BookRecommand_login'),
     url(r'^logout/$', 'django.contrib.auth.views.logout',
-                   {'next_page': reverse_lazy('homepage')}, name='mysite_logout'),
+                   {'next_page': reverse_lazy('homepage')}, name='BookRecommand_logout'),
 ]
