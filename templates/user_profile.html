@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Profile</title>
+    <link type="text/css" rel="stylesheet" href="user_profile.css">
+</head>
+<body>
+    <p>{% user.name %}</p>
+    <p>{% user.email %}</p>
+    {% l_keywords = keywords.split(',') %}
+    {% for keyword in l_keywords %}
+        <p>{% keyword %}</p>
+    {% l_subjects = subjects.split(',') %}
+    {% for subject in l_subjects %}
+        <p>{% subject %}</p>
+    <p>{% user.industry %}</p>
+    <p>{% user.major %}</p>
+    <form>
+        <input type="button"><a href = "/display_book/">See recommended books</a>
+    </form>
+</body>
+</html>
