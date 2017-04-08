@@ -20,13 +20,11 @@ def signup(request):
             user.industry = form.cleaned_data.get('industry')
             user.major = form.cleaned_data.get('major')
             user.books = form.cleaned_data.get('books')
-
             user.save()
-
-            return redirect('home')
+        return redirect('home')
     else:
         form = SignUpForm()
-    return render(request, 'signup.html', {'form': form})
+        return render(request, 'signup.html', {'form': form})
 
 # Create your views here.
 
@@ -36,13 +34,11 @@ def home(request):
 def welcome(request):
     return render(request, 'BookShare/welcome.html')
 
-def eachuser(request, id):
-    user = UserProfile.objects.filter(id = id)
+def eachuser(request):
+    user = request.user
     return render(request, 'BookShare/user_profile.html', {"user" : user})
 
-
-
 def recommendations(request, id):
-    user = UserProfile.objects.filter(id = id)
+    user = user.objects.filter(id = id)
     booklist = recommendation.recommend(user)
     return render(request, 'BookShare/display_book.html', {"books" : booklist})
