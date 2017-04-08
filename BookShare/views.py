@@ -8,6 +8,7 @@ from django.shortcuts import redirect
 
 from BookShare.forms import SignUpForm
 from BookShare.recommendation import recommend
+from BookShare.models import Uuser
 
 def signup(request):
     if request.method == "POST":
@@ -36,10 +37,10 @@ def welcome(request):
     return render(request, 'BookShare/welcome.html')
 
 def eachuser(request):
-    thisuser = request.user
+    thisuser = Uuser.objects.latest()
     return render(request, 'BookShare/user_profile.html', {"user" : thisuser})
 
 def recommendations(request):
-    thisuser = request.user
+    thisuser = Uuser.objects.latest()
     booklist = recommend(thisuser)
     return render(request, 'BookShare/display_book.html', {"books" : booklist})

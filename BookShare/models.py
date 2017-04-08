@@ -32,6 +32,10 @@ class Uuser(models.Model):
     industry = models.CharField(max_length=200)
     major = models.CharField(max_length=200)
     books = models.CharField(max_length=200)
+    creation_date = models.DateTimeField(auto_now_add = True, editable=False)
+    
+    class Meta:
+        get_latest_by = 'creation_date'
 
     def __str__(self):
         return self.name
