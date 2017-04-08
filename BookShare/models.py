@@ -19,6 +19,21 @@ class UserProfile(models.Model):
     def __str__(self):
         return self.name
 
+class User(models.Model):
+    name = models.CharField(max_length=200)
+    email = models.CharField(max_length=200)
+    keywords = models.TextField()
+    subjects = models.CharField(max_length=200)
+    industry = models.CharField(max_length=200)
+    major = models.CharField(max_length=200)
+    books = models.ManyToManyField(Book)
+    
+    def save(self):
+        self.save()
+    
+    def __str__(self):
+        return self.name
+
 class Book(models.Model):
     title = models.CharField(max_length=200)
     author = models.CharField(max_length=200)

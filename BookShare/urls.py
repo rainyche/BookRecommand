@@ -6,4 +6,5 @@ urlpatterns = [
                url(r'^eachuser/(\d+)/$', views.eachuser, name='eachuser'),
                url(r'^eachbook/(\d+)/$', views.eachbook, name='eachbook'),
                url(r'^eachuser/recommendations/(\d+)/$', views.recommendations, name='recommendations'),
+               url(r'^signup', views.signup, name='signup'),
 ]
