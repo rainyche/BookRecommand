@@ -3,7 +3,8 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from BookShare.models import Uuser
 
-
+# This is the form for signing up. It has seven fields, name, email, keywords, 
+# subjects, industry, major and books
 class SignUpForm(forms.ModelForm):
     name = forms.CharField(max_length=200)
     email = forms.CharField(max_length=200)

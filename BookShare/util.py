@@ -14,8 +14,6 @@ def probability_distribution(prob, n):
     return dist
 
 def interests_vector(interests):
-    '''
-    '''
     vector = [0]*len(interests)
     for i, interest in enumerate(interests):
         if interest:

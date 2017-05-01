@@ -1,19 +1,14 @@
 from BookShare.models import Uuser
 import operator
-# need some tests
+
+# This is the recommendation function. 
+# We give higher weights to books recommended by people that
+# are similar to the current user.
 
 def recommend(c_user):
-    '''
-        c_user: a user object
-        '''
 
     book_score = {}
-    '''
-    if c_user.subjects == None and c_user.keywords == None:
-        for peruser in user.objects.all():
-            userslist.append(peruser)
-        return userslist
-    '''
+
     for peruser in Uuser.objects.all():
         if peruser.books not in book_score.keys():
             book_score[peruser.books] = 0
@@ -25,6 +20,7 @@ def recommend(c_user):
             book_score[peruser.books] += 1
         if (peruser.major == c_user.major):
             book_score[peruser.books] += 1
+
     l_book = sorted(book_score.items(), key=operator.itemgetter(1), reverse = True)
     return l_book
 

@@ -5,5 +5,5 @@ from django.contrib import admin
 from BookShare.models import Uuser
 
 
-# Register your models here.
+# Register admin user Uuser
 admin.site.register(Uuser)
